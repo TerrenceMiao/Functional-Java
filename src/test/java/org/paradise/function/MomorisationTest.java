@@ -11,11 +11,12 @@ import static org.junit.Assert.*;
  */
 public class MomorisationTest {
 
-    Memorisation memorisation = new Memorisation();
+    Memorisation memorisation;
 
     @Before
     public void setUp() throws Exception {
 
+        memorisation = new Memorisation();
     }
 
     @After
