@@ -1,6 +1,5 @@
 package org.paradise.function;
 
-import java.util.function.DoubleBinaryOperator;
 import java.util.function.Function;
 
 /**
