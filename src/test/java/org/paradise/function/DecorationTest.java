@@ -28,6 +28,7 @@ public class DecorationTest {
     public void testTimeSquare() {
 
         decoration.timeSquare.apply(3);
+        decoration.timeSquare.apply(3);
     }
 
 }
