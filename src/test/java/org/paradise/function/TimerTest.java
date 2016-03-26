@@ -27,7 +27,10 @@ public class TimerTest {
     @Test
     public void testTime() throws Exception {
 
+        timer.time(timer.getPrime).apply(10);
+        timer.time(timer.getPrime).apply(100);
         timer.time(timer.getPrime).apply(1000);
+        timer.time(timer.getPrime).apply(2500);
     }
 
 }

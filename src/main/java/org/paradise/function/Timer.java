@@ -9,7 +9,12 @@ import java.util.function.Function;
  */
 public class Timer {
 
-    public Function<Integer, BigInteger> getPrime = x -> new BigInteger(x, new Random()).nextProbablePrime();
+    public Function<Integer, BigInteger> getPrime = x -> {
+
+        System.out.println("Maximum bitLength for random number: " + x + "");
+
+        return new BigInteger(x, new Random()).nextProbablePrime();
+    };
 
     public <T, R> Function<T, R> time(Function<T, R> fn) {
 
@@ -17,7 +22,9 @@ public class Timer {
             long startTime = System.currentTimeMillis();
             R result = fn.apply(t);
             long timeTaken = System.currentTimeMillis() - startTime;
-            System.out.println("Time: " + timeTaken + " ms");
+
+            System.out.println("Total time taken: " + timeTaken + " ms\n");
+
             return result;
         };
     }
