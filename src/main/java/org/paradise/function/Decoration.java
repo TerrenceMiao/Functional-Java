@@ -7,7 +7,7 @@ import java.util.function.Function;
  */
 public class Decoration {
 
-    Function<Integer, Integer> expensiveSquare = x -> {
+    static Function<Integer, Integer> expensiveSquare = x -> {
 
         System.out.println("Now Squaring...");
 
@@ -20,6 +20,6 @@ public class Decoration {
     };
 
     // Decorate with time and memoize
-    Function<Integer, Integer> timeSquare = new Timer().time(new Memorisation().memorise(expensiveSquare));
+    static Function<Integer, Integer> timeSquare = Timer.time(Memorisation.memorise(expensiveSquare));
 
 }

@@ -7,13 +7,13 @@ import java.util.function.Function;
  */
 public class Return {
 
-    Function<Double, Double> power(double raiseTo) {
+    static Function<Double, Double> power(double raiseTo) {
 
         return x -> Math.pow(x, raiseTo);
     }
 
-    Function<Double, Double> square = power(2.0);
+    static Function<Double, Double> square = power(2.0);
 
-    Function<Double, Double> cube = power(3.0);
+    static Function<Double, Double> cube = power(3.0);
 
 }

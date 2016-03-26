@@ -9,14 +9,14 @@ import java.util.function.Function;
  */
 public class Timer {
 
-    public Function<Integer, BigInteger> getPrime = x -> {
+    static Function<Integer, BigInteger> getPrime = x -> {
 
         System.out.println("Maximum bitLength for random number: " + x + "");
 
         return new BigInteger(x, new Random()).nextProbablePrime();
     };
 
-    public <T, R> Function<T, R> time(Function<T, R> fn) {
+    static <T, R> Function<T, R> time(Function<T, R> fn) {
 
         return t -> {
             long startTime = System.currentTimeMillis();

@@ -11,12 +11,9 @@ import static org.junit.Assert.*;
  */
 public class ReturnTest {
 
-    Return aReturn;
-
     @Before
     public void setUp() throws Exception {
 
-        aReturn = new Return();
     }
 
     @After
@@ -27,9 +24,9 @@ public class ReturnTest {
     @Test
     public void testPower() throws Exception {
 
-        assertEquals("Incorrect square return", Double.valueOf(4.0), aReturn.square.apply(2.0));
+        assertEquals("Incorrect square return", Double.valueOf(4.0), Return.square.apply(2.0));
 
-        assertEquals("Incorrect cube return", Double.valueOf(8.0), aReturn.cube.apply(2.0));
+        assertEquals("Incorrect cube return", Double.valueOf(8.0), Return.cube.apply(2.0));
     }
 
 }

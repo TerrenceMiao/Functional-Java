@@ -11,12 +11,9 @@ import static org.junit.Assert.*;
  */
 public class DecorationTest {
 
-    Decoration decoration;
-
     @Before
     public void setUp() throws Exception {
 
-        decoration = new Decoration();
     }
 
     @After
@@ -27,8 +24,10 @@ public class DecorationTest {
     @Test
     public void testTimeSquare() {
 
-        decoration.timeSquare.apply(3);
-        decoration.timeSquare.apply(3);
+        Decoration.timeSquare.apply(3);
+        Decoration.timeSquare.apply(4);
+        Decoration.timeSquare.apply(3);
+        Decoration.timeSquare.apply(4);
     }
 
 }

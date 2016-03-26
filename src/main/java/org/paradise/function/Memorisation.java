@@ -9,9 +9,9 @@ import java.util.function.Function;
  */
 public class Memorisation {
 
-    public <T, R> Function<T, R> memorise(Function<T, R> fn) {
+    static <T, R> Function<T, R> memorise(Function<T, R> fn) {
 
-        System.out.println("Init memorise ...\n");
+        System.out.println("Init memorise(Function<T, R> fn) ...\n");
 
         final Map<T, R> cache = new HashMap<>();
 
@@ -31,7 +31,7 @@ public class Memorisation {
         };
     }
 
-    public Function<Double, Double> memorisedDoubler = memorise(x -> {
+    static Function<Double, Double> memorisedDoubler = memorise(x -> {
 
         System.out.println("In memorisedDoubler(" + x + ")");
 

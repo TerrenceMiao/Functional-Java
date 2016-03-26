@@ -11,12 +11,9 @@ import static org.junit.Assert.*;
  */
 public class TimerTest {
 
-    Timer timer;
-
     @Before
     public void setUp() throws Exception {
 
-        timer = new Timer();
     }
 
     @After
@@ -27,10 +24,10 @@ public class TimerTest {
     @Test
     public void testTime() throws Exception {
 
-        timer.time(timer.getPrime).apply(10);
-        timer.time(timer.getPrime).apply(100);
-        timer.time(timer.getPrime).apply(1000);
-        timer.time(timer.getPrime).apply(2500);
+        Timer.time(Timer.getPrime).apply(10);
+        Timer.time(Timer.getPrime).apply(100);
+        Timer.time(Timer.getPrime).apply(1000);
+        Timer.time(Timer.getPrime).apply(2000);
     }
 
 }
