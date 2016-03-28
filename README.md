@@ -7,3 +7,4 @@ Lots of bolts and nuts, tips and examples transform Object Oriented Java into Fu
 #### Reference
 
 * Jumping with Java 8, _http://www.slideshare.net/DhavalDalal/jumpingwithjava8_
+* Jumping with Java 8 source code, _https://github.com/DhavalDalal/Java8-Try_
