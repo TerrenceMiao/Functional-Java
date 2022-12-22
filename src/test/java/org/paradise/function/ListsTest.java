@@ -1,14 +1,11 @@
 package org.paradise.function;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ListsTest {
 
@@ -23,7 +20,7 @@ public class ListsTest {
         Lists lists = new Lists();
         List<String> aList = lists.convertListOfListIntoList(listOfList);
 
-        assertEquals("Incorrect result", aList, Arrays.asList( "1", "2", "A", "B"));
+        assertEquals(aList, Arrays.asList( "1", "2", "A", "B"), "Incorrect result");
     }
 
 }

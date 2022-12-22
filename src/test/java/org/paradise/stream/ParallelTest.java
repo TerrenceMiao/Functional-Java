@@ -1,13 +1,11 @@
 package org.paradise.stream;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by terrence on 28/03/2016.
@@ -16,13 +14,13 @@ public class ParallelTest {
 
     List<Double> numbers;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
 
         numbers = Arrays.asList(1.0, 2.0, 3.0, 4.0, 5.0);
     }
 
-    @After
+    @AfterEach
     public void tearDown() throws Exception {
 
     }

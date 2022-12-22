@@ -1,22 +1,22 @@
 package org.paradise.function;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Created by terrence on 24/03/2016.
  */
 public class MomorisationTest {
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
 
     }
 
-    @After
+    @AfterEach
     public void tearDown() throws Exception {
 
     }
@@ -25,16 +25,16 @@ public class MomorisationTest {
     public void testMemorisedDoubler() {
 
         System.out.println("First call");
-        assertEquals("Incorrect memorised double return", Double.valueOf(4.0), Memorisation.memorisedDoubler.apply(2.0));
+        assertEquals(Double.valueOf(4.0), Memorisation.memorisedDoubler.apply(2.0), "Incorrect result");
 
         System.out.println("Second call");
-        assertEquals("Incorrect memorised double return", Double.valueOf(4.0), Memorisation.memorisedDoubler.apply(2.0));
+        assertEquals(Double.valueOf(4.0), Memorisation.memorisedDoubler.apply(2.0), "Incorrect result");
 
         System.out.println("Third call");
-        assertEquals("Incorrect memorised double return", Double.valueOf(6.0), Memorisation.memorisedDoubler.apply(3.0));
+        assertEquals(Double.valueOf(6.0), Memorisation.memorisedDoubler.apply(3.0), "Incorrect result");
 
         System.out.println("Fourth call");
-        assertEquals("Incorrect memorised double return", Double.valueOf(6.0), Memorisation.memorisedDoubler.apply(3.0));
+        assertEquals(Double.valueOf(6.0), Memorisation.memorisedDoubler.apply(3.0), "Incorrect result");
     }
 
 }
